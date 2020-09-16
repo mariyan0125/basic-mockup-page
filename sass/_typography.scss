@@ -1,0 +1,41 @@
+h1 {
+  font-family: 'Lora', serif;
+  
+  color: $color-navy-dark;
+  margin: -.2em .5em 0 0;
+
+  @include respond(tab-land-sm) { //1125px
+    margin-bottom: 1em;
+  }
+
+  @include respond(phone) { //600px
+    font-size: 35px;
+    line-height: 1.3;
+  } 
+  @include respond(phone-xs) { //360px
+    font-size: 30px;
+  } 
+}
+
+h2 {
+font-size: 32px;
+font-weight: 500;
+color: $color-navy;
+margin: 1.5em 0 1.2em 0;
+
+  @include respond(phone) { //600px
+    font-size: 25px;
+  } 
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: $color-navy;
+  margin-bottom: .7em;
+  
+  @include respond(phone-xs) { //360px
+    font-size: 20px;
+  } 
+}
+

@@ -1,0 +1,80 @@
+/**********************
+//COLORS
+***********************/
+$color-white: #fff;
+$color-black: #171717;
+$color-navy: #003B4D;
+$color-navy-dark: #00333C;
+$color-green: #1D8751;
+$color-grey:#85989E;
+
+/**********************
+//RESET
+***********************/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/**********************
+// RESPONSIVE (BREAKPOINTS)
+***********************/
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == phone-xs {
+    @media only screen and (max-width: 22.5em) { @content }; //360px
+   }
+  @if $breakpoint == phone-sm {
+    @media only screen and (max-width: 31.25em) { @content }; //500px
+   }
+  @if $breakpoint == phone {
+   @media only screen and (max-width: 37.5em) { @content }; //600px
+  }
+  @if $breakpoint == tab-port {
+   @media only screen and (max-width: 56.25em) { @content }; //900px
+  }
+  @if $breakpoint == tab-land-sm {
+    @media only screen and (max-width: 70.31em) { @content }; //1125px
+   }
+   @if $breakpoint == tab-land {
+    @media only screen and (max-width: 75em) { @content }; //1200px
+   }
+ }
+
+/**********************
+// GENERAL STYLING
+***********************/ 
+
+body {
+  box-sizing: border-box;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  color: $color-black;
+  line-height: 36px;
+
+  @include respond(phone) { 
+    font-size: 20px;
+  }
+  
+  @include respond(phone-sm) { 
+    font-size: 18px;
+    line-height: 30px;
+  }
+  @include respond(phone-xs) { 
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+::selection {
+  background-color: $color-green;
+  color: $color-white;
+  
+}

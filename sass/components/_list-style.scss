@@ -1,0 +1,58 @@
+ol, ul {
+  list-style: none;
+  margin-left: 1.3em;
+}
+ul li, ol li {
+  margin-bottom: .5em;
+}
+
+ul li::before {
+  content: "\2022";
+  color: $color-navy;
+  font-weight: bold;
+  display: block; 
+  font-size: 1.42em;//~ 34px  (1em = 24px)
+  line-height: 1em;
+  float: left;
+  margin-top: .12em;
+  margin-left: -1em;
+}
+
+li ul li::before {
+    content: "\2010";
+    font-size: 1.25em;//30px
+    margin-top: -.1em;
+  }
+
+li ul li ul li::before {
+    content: "\26AC";
+    font-size: 1.42em;//~34px
+    margin-top: .05em;
+  }
+
+
+ol li::before {
+  content: "\0031.";
+  color: $color-navy;
+  display: block; 
+  font-size: 1em; //24px
+  line-height: 1em;
+  float: left;
+  margin-top: .25em;
+  margin-left: -1.5em;
+}
+
+ol li:nth-child(2)::before {
+  content: "\0032.";
+}
+ol li:nth-child(3)::before {
+  content: "\0033.";
+}
+
+li ol li::before {
+  content: "\0061.";
+}
+
+li ol li ol li::before {
+  content: "\0069.";
+}

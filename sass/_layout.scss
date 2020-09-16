@@ -1,0 +1,57 @@
+body {
+  padding: 2.5em 0;
+}
+
+.container {
+  max-width: 1090px;
+  margin: 0 auto;
+  padding: 2em 0;
+  background: url(../assets/b-line.svg) center top no-repeat;
+
+  @include respond(tab-land-sm) { //1125px
+    max-width: 35em; 
+    padding: 2em 1em;
+    
+  }
+
+  @include respond(tab-port) { //900px
+    max-width: none; 
+    margin: 1em;
+  }
+
+  @include respond(phone-sm) { //500px
+    padding: 2em 0;
+  }
+
+
+}
+
+.content-text {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(tab-land-sm) { //1125px
+    flex-wrap: wrap;
+  }
+
+  div {
+    max-width: 685px;
+    
+    @include respond(tab-land-sm) { //1125px
+      max-width: none;
+    }
+  }
+}
+
+.cards {
+  margin-top: 4em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.9em;
+
+  @include respond(tab-land-sm) {  //1125px
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.9em 0;
+    justify-items: center;
+  }  
+}
